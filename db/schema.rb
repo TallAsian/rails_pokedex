@@ -44,9 +44,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_18_211028) do
   end
 
   create_table "pokemon_types", force: :cascade do |t|
+    t.integer "pokemon_infos_id", null: false
     t.integer "type_names_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pokemon_infos_id"], name: "index_pokemon_types_on_pokemon_infos_id"
     t.index ["type_names_id"], name: "index_pokemon_types_on_type_names_id"
   end
 
@@ -58,5 +60,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_18_211028) do
 
   add_foreign_key "pokemon_infos", "pokemon_sizes", column: "pokemon_sizes_id"
   add_foreign_key "pokemon_infos", "pokemon_stats", column: "pokemon_stats_id"
+  add_foreign_key "pokemon_types", "pokemon_infos", column: "pokemon_infos_id"
   add_foreign_key "pokemon_types", "type_names", column: "type_names_id"
 end
