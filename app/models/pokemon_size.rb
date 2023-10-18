@@ -1,0 +1,2 @@
+class PokemonSize < ApplicationRecord
+end
