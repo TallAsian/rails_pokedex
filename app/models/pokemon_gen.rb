@@ -1,0 +1,2 @@
+class PokemonGen < ApplicationRecord
+end

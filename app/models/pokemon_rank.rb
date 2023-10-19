@@ -1,0 +1,2 @@
+class PokemonRank < ApplicationRecord
+end

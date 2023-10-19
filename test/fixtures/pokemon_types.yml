@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon_info: one
+  type_name: one
+
+two:
+  pokemon_info: two
+  type_name: two
