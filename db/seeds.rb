@@ -1,9 +1,27 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+require 'csv'
+
+PokemonStat.delete_all
+TypeName.delete_all
+PokemonSize.delete_all
+PokemonType.delete_all
+PokemonInfo.delete_all
+
+filename = Rails.root.join('db/pokemons.csv')
+
+puts "Loading Pokemon from the csv file: #{filename}"
+
+csv_data = File.read(filename)
+
+pokemons = CSV.parse(csv_data, headers: true, encoding: "utf-8")
+
+pokemons.each do |s|
+    pokemon_stat = PokemonStat.create(hp: s["hp"], attack: s["atk"], defense: s["def"], spatk: s["spatk"], 
+        spdef: s["spdef"], speed: s["speed"], total: s["total"])
+
+    if pokemon_stat && pokemon_stat.valid?
+
+    else
+        puts "Invalid pokemon stats"
+    end
+puts "Created #{PokemonStat.count} Pokemon stats"
+end
