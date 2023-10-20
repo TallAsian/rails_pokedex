@@ -1,6 +1,6 @@
 class CreatePokemonInfos < ActiveRecord::Migration[7.1]
   def change
-    create_table :pokemon_info do |t|
+    create_table :pokemon_infos do |t|
       t.string :name
       t.text :description
       t.integer :height

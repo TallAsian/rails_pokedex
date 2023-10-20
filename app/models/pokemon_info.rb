@@ -7,4 +7,5 @@ class PokemonInfo < ApplicationRecord
 
   validates :name, :description, :height, :weight, presence: true
   validates :name, uniqueness: true
+  validates :height, :weight, numericality: {only_integers: true}
 end

@@ -1,6 +1,6 @@
 class CreatePokemonStats < ActiveRecord::Migration[7.1]
   def change
-    create_table :pokemon_stat do |t|
+    create_table :pokemon_stats do |t|
       t.integer :hp
       t.integer :attack
       t.integer :defense
