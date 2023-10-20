@@ -1,0 +1,2 @@
+module PokemonGensHelper
+end
