@@ -1,15 +1,149 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Basic page styles */
+body {
+    background-color: #f0f0f0;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Header styles */
+  .header {
+    background-color: #e74c3c;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center; border: 2px solid #000000; /* Border color and width */
+    border-radius: 50px; /* Adjust the radius to control the roundness */
+    padding: 20px; /* Optional padding to add space around the content */
+  }
+  
+  /* Container for the Pokémon information */
+  .pokemon-container {
+    list-style-type: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display three columns */
+    text-align: center;
+  }
+
+
+  
+  /* Pokémon image styles */
+  .pokemon-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Pokémon name and number styles */
+  .pokemon-name {
+    font-size: 32px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Pokémon type styles */
+  .pokemon-type {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  /* Pokémon description styles */
+  .pokemon-description {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  /* Back button styles */
+  .back-button {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button a:hover {
+    background-color: #0056b3;
+  }
+  
+  a {
+    text-decoration: none; /* Remove underlines */
+    color: inherit; /* Inherit the text color from the parent element */
+    cursor: pointer; /* Change the cursor to a pointer on hover for better user experience */
+  }
+  
+  /* Style the link text to match regular text */
+  a:hover {
+    /* Optional: Add styles for hover (e.g., change text color) */
+    color: #007bff; /* Change text color on hover */
+  }
+
+  /* Style the navigation bar */
+.navbar {
+    max-width: 840px;
+    background-color: #333; /* Background color for the navbar */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Padding for top and bottom */
+    margin: auto;
+  }
+  
+  /* Style the list items and links */
+  .navbar ul {
+    list-style: none; /* Remove default list bullets */
+    text-align: center; /* Center-align the list items */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    display: inline; /* Display list items horizontally */
+    margin: 0 20px; /* Add spacing between list items */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for links */
+    font-weight: bold; /* Bold text for links */
+  }
+  
+  .navbar a:hover {
+    /* Optional: Add styles for link hover states */
+    text-decoration: underline; /* Underline links on hover */
+  }
+  .search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Adjust spacing for the search bar */
+  .search {
+    margin: 10px 0;
+  }

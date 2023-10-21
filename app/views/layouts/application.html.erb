@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <h1 class="header"> Rails Pokedex </h1>
+    <div class="navbar-container">
+      <div class="navbar">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Generations</a></li>
+        <li class="search">
+          <input type="text" placeholder="Search pokemon">
+          <button type="submit">Search</button>
+        </li>
+      </ul>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
