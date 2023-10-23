@@ -1,2 +1,14 @@
 <h1>PokemonRanks#show</h1>
-<p>Find me in app/views/pokemon_ranks/show.html.erb</p>
+<p><%= @pokemon_rank.name %></p>
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_rank.pokemon_info.each do |rank| %>
+            <li class="pokemon-name">
+                <%= link_to (rank) do %>
+                    <%= image_tag "#{rank.id}.png", class: "pokemon-image" %>
+                    <%= rank.name %>
+                <% end %>
+            </li>
+        <% end %>
+    </ol>
+</div>

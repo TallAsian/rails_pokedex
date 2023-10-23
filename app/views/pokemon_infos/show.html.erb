@@ -5,8 +5,15 @@
     <div class="grid-container">
         <div class="pokemon-description">
             <h2 class="pokemon-name"><%= @pokemon_info.name %></h2>
-            <p><%= link_to @pokemon_gen.name %></p>
-            <p><%= link_to "#{@pokemon_rank.name} pokemon" %></p>
+            <p>| 
+                <% @pokemon_type.each do |type| %>
+                    <% if type.pokemon_info_id == @pokemon_info.id%>
+                        <%= link_to type.type_name.name, type %> |
+                    <% end %>
+                <% end %>
+            </p>
+            <p><%= link_to @pokemon_gen.name, @pokemon_gen %></p>
+            <p><%= link_to "#{@pokemon_rank.name} pokemon", @pokemon_rank %></p>
             <p><%= @pokemon_info.description %></p>
         </div>
     </div>
