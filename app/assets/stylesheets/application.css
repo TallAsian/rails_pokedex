@@ -7,6 +7,12 @@ body {
     text-align: center;
   }
 
+  p{
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+    text-align: center;
+  }
   /* Header styles */
   .header {
     background-color: #e74c3c;

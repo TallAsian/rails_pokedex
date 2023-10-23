@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'about', to: 'static_pages#about'
   # get 'pokemon_stats/index'
   # get 'pokemon_stats/show'
   # get 'type_names/index'
