@@ -1,1 +1,13 @@
 <h1>Pokedex Entry #<%= @pokemon_info.id%></h1>
+
+<div class="pokemon-container">
+    <%= image_tag "#{@pokemon_info.id}.png", class: "pokemon-image" %>
+    <div class="grid-container">
+        <div class="pokemon-description">
+            <h2 class="pokemon-name"><%= @pokemon_info.name %></h2>
+            <p><%= link_to @pokemon_gen.name %></p>
+            <p><%= link_to "#{@pokemon_rank.name} pokemon" %></p>
+            <p><%= @pokemon_info.description %></p>
+        </div>
+    </div>
+</div>

@@ -153,3 +153,8 @@ body {
   .search {
     margin: 10px 0;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Create a single column grid */
+  }
