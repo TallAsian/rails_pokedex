@@ -1,2 +1,11 @@
-<h1>PokemonGens#index</h1>
-<p>Find me in app/views/pokemon_gens/index.html.erb</p>
+<h1>Pokemon Ranks</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_gen.each do |gen| %>
+            <li class="pokemon-name">
+                <%= link_to gen.name, gen %>
+            </li>
+        <% end %>
+    </ol>
+</div>

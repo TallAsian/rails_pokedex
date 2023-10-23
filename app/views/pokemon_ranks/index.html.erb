@@ -1,2 +1,11 @@
-<h1>PokemonRanks#index</h1>
-<p><%= @pokemon_rank %></p>
+<h1>Pokemon Ranks</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_rank.each do |rank| %>
+            <li class="pokemon-name">
+                <%= link_to rank.name, rank %>
+            </li>
+        <% end %>
+    </ol>
+</div>
