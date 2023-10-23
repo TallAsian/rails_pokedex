@@ -4,8 +4,10 @@
     <ol class="pokemon-container">
         <% @pokemon_infos.each do |pokemon_info| %>
             <li class="pokemon-name">
-                <%= image_tag "#{pokemon_info.id}.png", class: "pokemon-image" %>
-                <%= link_to pokemon_info.name, pokemon_info %>
+                <%= link_to (pokemon_info) do %>
+                    <%= image_tag "#{pokemon_info.id}.png", class: "pokemon-image" %>
+                    <%= pokemon_info.name %>
+                <% end %>
             </li>
         <% end %>
     </ol>
