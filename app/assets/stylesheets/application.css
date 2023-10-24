@@ -106,13 +106,18 @@ body {
     text-decoration: underline;
   }
   
-  .search input {
+  .search{
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .search-input {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #010101;
     border-radius: 5px;
   }
   
-  .search button {
+  .search-button {
     background-color: #e74c3c;
     color: #fff;
     border: none;

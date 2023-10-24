@@ -14,12 +14,16 @@ Rails.application.routes.draw do
   # get 'pokemon_infos/index'
   # get 'pokemon_infos/show'
 
-resources :pokemon_infos, only: [:index, :show]
-resources :pokemon_types, only: [:index, :show]
-resources :pokemon_stats, only: [:index, :show]
-resources :pokemon_gens, only: [:index, :show]
-resources :pokemon_ranks, only: [:index, :show]
-resources :type_names, only: [:index, :show]
+resources :pokemon_infos, only: %i[index show] do
+  collection do
+    get "search"
+  end
+end
+resources :pokemon_types, only: %i[index show]
+resources :pokemon_stats, only: %i[index show]
+resources :pokemon_gens, only: %i[index show]
+resources :pokemon_ranks, only: %i[index show]
+resources :type_names, only: %i[index show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

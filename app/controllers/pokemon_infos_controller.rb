@@ -10,4 +10,9 @@ class PokemonInfosController < ApplicationController
     @pokemon_type = PokemonType.where(pokemon_info_id: @pokemon_info.id)
     @pokemon_stat = PokemonStat.find_by(id: @pokemon_info.pokemon_stat_id)
   end
+
+  def search
+    wildcard_search = "%#{params[:keywords]}%"
+    @pokemon_infos = PokemonInfo.where("name LIKE ?", wildcard_search).paginate(page: params[:page], per_page: 9)
+  end
 end

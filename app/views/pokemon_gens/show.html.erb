@@ -4,7 +4,7 @@
         <% @pokemon_infos.each do |gen| %>
             <li class="pokemon-name">
                 <%= link_to (gen) do %>
-                    <%= image_tag "#{gen.id}.png", class: "pokemon-image" %>
+                    <%= image_tag "#{gen.id}.png", class: "pokemon-image", alt: "#{gen.name} image" %>
                     <%= gen.name %>
                 <% end %>
             </li>

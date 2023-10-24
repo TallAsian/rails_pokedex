@@ -4,7 +4,7 @@
         <% @pokemon_infos.each do |rank| %>
             <li class="pokemon-name">
                 <%= link_to (rank) do %>
-                    <%= image_tag "#{rank.id}.png", class: "pokemon-image" %>
+                    <%= image_tag "#{rank.id}.png", class: "pokemon-image", alt: "#{rank.name} image" %>
                     <%= rank.name %>
                 <% end %>
             </li>

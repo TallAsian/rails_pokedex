@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>RailsPokedex</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,12 +20,14 @@
           <li><%= link_to "Generations", pokemon_gens_path %></li>
           <li><%= link_to "Types", type_names_path %></li>
           <li><%= link_to "Ranks", pokemon_ranks_path %></li>
-        <li class="search">
-          <input type="text" placeholder="Search pokemon">
-          <button type="submit">Search</button>
-        </li>
       </ul>
       </div>
+    </div>
+    <div class="search">
+      <%= form_with(url:search_pokemon_infos_path, method: :get, local:true) do %>
+        <%= text_field_tag(:keywords, nil, class: "search-input", placeholder: "Search pokemon") %>
+        <%= submit_tag("Search", class: "search-button")%>
+      <% end %>     
     </div>
     <%= yield %>
   </body>
