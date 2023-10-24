@@ -1,7 +1,7 @@
 <h1><%= @pokemon_rank.name %> pokemons</h1>
 <div>
     <ol class="pokemon-container">
-        <% @pokemon_rank.pokemon_info.each do |rank| %>
+        <% @pokemon_infos.each do |rank| %>
             <li class="pokemon-name">
                 <%= link_to (rank) do %>
                     <%= image_tag "#{rank.id}.png", class: "pokemon-image" %>
@@ -10,4 +10,7 @@
             </li>
         <% end %>
     </ol>
+    <div class="pagination">
+        <%= paginate @pokemon_infos %>
+    </div>
 </div>

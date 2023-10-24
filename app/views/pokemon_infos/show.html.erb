@@ -5,7 +5,7 @@
     <div class="grid-container">
         <div class="pokemon-description">
             <h2 class="pokemon-name"><%= @pokemon_info.name %></h2>
-            <p>| 
+            <p class="pokemon-type">| 
                 <% @pokemon_type.each do |type| %>
                     <%= link_to type.type_name.name, type %> |
                 <% end %>

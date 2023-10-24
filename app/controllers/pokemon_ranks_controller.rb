@@ -4,7 +4,7 @@ class PokemonRanksController < ApplicationController
   end
 
   def show
-    @pokemon_infos = PokemonInfo.all
     @pokemon_rank = PokemonRank.find(params[:id])
+    @pokemon_infos = @pokemon_rank.pokemon_info.paginate(page: params[:page], per_page: 9)
   end
 end
