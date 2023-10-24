@@ -1,2 +1,13 @@
-<h1>TypeNames#index</h1>
-<p>Find me in app/views/type_names/index.html.erb</p>
+<h1>Pokemon Types</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @type_name.each do |type| %>
+            <% if type.name != "None" %>
+                <li class="pokemon-name">
+                    <%= link_to type.name, type %>
+                </li>
+            <% end %>
+        <% end %>
+    </ol>
+</div>

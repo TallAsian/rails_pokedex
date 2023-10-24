@@ -1,2 +1,14 @@
-<h1>TypeNames#show</h1>
-<p>Find me in app/views/type_names/show.html.erb</p>
+<h1><%= @type_name.name %> type pokemons</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @type_name.pokemon_type.each do |type| %>
+            <li class="pokemon-name">
+                <%= link_to (type) do %>
+                    <%= image_tag "#{type.id}.png", class: "pokemon-image" %>
+                    <%= type.id %>
+                <% end %>
+            </li>
+        <% end %>
+    </ol>
+</div>

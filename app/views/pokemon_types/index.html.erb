@@ -1,2 +1,11 @@
-<h1>PokemonTypes#index</h1>
-<p>Find me in app/views/pokemon_types/index.html.erb</p>
+<h1>Pokemon Types</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_type.each do |type| %>
+            <li class="pokemon-name">
+                <%= link_to type.id, type %>
+            </li>
+        <% end %>
+    </ol>
+</div>
