@@ -15,13 +15,14 @@
             <p><%= @pokemon_info.description %></p>
         </div>
     </div>
-    <div>
-        <p class="pokemon-name">Stats</p>
+    <div class="pokemon-description">
+        <h2 class="pokemon-name">stats</h2>
         <p>Hit points: <%= @pokemon_stat.hp %></p>
         <p>Attack: <%= @pokemon_stat.attack %></p>
         <p>Defense: <%= @pokemon_stat.defense %></p>
         <p>Special attack: <%= @pokemon_stat.spatk %></p>
         <p>Special defense: <%= @pokemon_stat.spdef %></p>
         <p>Speed: <%= @pokemon_stat.speed %></p>
+        <p>Total points: <%= @pokemon_stat.total %></p>
     </div>
 </div>
