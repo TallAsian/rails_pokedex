@@ -13,6 +13,14 @@ class PokemonInfosController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keywords]}%"
-    @pokemon_infos = PokemonInfo.where("name LIKE ?", wildcard_search).paginate(page: params[:page], per_page: 9)
+    gen_id = params[:search][:gen_id]
+
+    if gen_id.present?
+      @pokemon_infos = PokemonInfo.where("name LIKE ? AND pokemon_gen_id = ?", wildcard_search, gen_id)
+    else
+      @pokemon_infos = PokemonInfo.where("name LIKE ?", wildcard_search)
+    end
+
+    @pokemon_infos = @pokemon_infos.paginate(page: params[:page], per_page: 9)
   end
 end
