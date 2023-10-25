@@ -1,13 +1,17 @@
 <h1>Pokedex Entry #<%= @pokemon_info.id%></h1>
 
 <div class="pokemon-container">
-    <%= image_tag "#{@pokemon_info.id}.png", class: "pokemon-image", alt: "#{pokemon_info.name} image" %>
+    <%= image_tag "#{@pokemon_info.id}.png", class: "pokemon-image", alt: "#{@pokemon_info.name} image" %>
     <div class="grid-container">
         <div class="pokemon-description">
             <h2 class="pokemon-name"><%= @pokemon_info.name %></h2>
             <p class="pokemon-type">| 
                 <% @pokemon_type.each do |type| %>
-                    <%= link_to type.type_name.name, type %> |
+                    <% if type.type_name.name != "None"%>
+                        <%= link_to type.type_name.name, type %> |
+                    <% else %>
+                        <%= type.type_name.name %>
+                    <% end %>
                 <% end %>
             </p>
             <p><%= link_to @pokemon_gen.name, @pokemon_gen %></p>

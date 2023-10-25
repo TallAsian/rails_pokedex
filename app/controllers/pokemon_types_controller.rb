@@ -3,9 +3,7 @@ class PokemonTypesController < ApplicationController
   end
 
   def show
-    @pokemon_infos = PokemonInfo.all
-    @pokemon_type = PokemonType.find(params[:id])
-    # @pokemon_type = PokemonType.find(params[:id])
-    # @type_name = TypeName.find_by(id: @pokemon_type.type_name_id)
+    @pokemon_types = PokemonType.find(params[:id])
+    @pokemon_type = PokemonType.where(type_name_id: @pokemon_types.type_name_id).paginate(page: params[:page], per_page: 9)
   end
 end
