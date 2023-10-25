@@ -1,4 +1,5 @@
 require 'csv'
+require 'faker'
 
 PokemonType.delete_all
 PokemonInfo.delete_all
@@ -59,7 +60,8 @@ pokemons.each do |p|
                     weight: p["weight"],
                     pokemon_stat_id: pokemon_stat.id,
                     pokemon_rank_id: pokemon_rank.id,
-                    pokemon_gen_id: pokemon_gen.id
+                    pokemon_gen_id: pokemon_gen.id,
+                    location: Faker::Address.full_address
                 )
 
                 pokemon_type = PokemonType.create(
