@@ -1,0 +1,11 @@
+<h1>Pokemon Types</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_type.each do |type| %>
+            <li class="pokemon-name">
+                <%= link_to type.id, type %>
+            </li>
+        <% end %>
+    </ol>
+</div>

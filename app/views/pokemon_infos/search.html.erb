@@ -1,0 +1,17 @@
+<h1>Search results for: <%= params[:keywords] %></h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_infos.each do |pokemon_info| %>
+            <li class="pokemon-name">
+                <%= link_to (pokemon_info) do %>
+                    <%= image_tag "#{pokemon_info.id}.png", class: "pokemon-image", alt: "#{pokemon_info.name} image" %>
+                    <%= pokemon_info.name %>
+                <% end %>
+            </li>
+        <% end %>
+    </ol>
+    <div class="pagination">
+        <%= paginate @pokemon_infos %>
+    </div>
+</div>

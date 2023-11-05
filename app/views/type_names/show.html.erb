@@ -1,0 +1,17 @@
+<h1><%= @type_name.name %> type pokemons</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_type.each do |type| %>
+            <li class="pokemon-name">
+                <%= link_to (type.pokemon_info) do %>
+                    <%= image_tag "#{type.pokemon_info.id}.png", class: "pokemon-image", alt: "#{type.pokemon_info.name} image" %>
+                    <%= type.pokemon_info.name %>
+                <% end %>
+            </li>
+        <% end %>
+    </ol>
+    <div class="pagination">
+        <%= paginate @pokemon_type %>
+    </div>
+</div>

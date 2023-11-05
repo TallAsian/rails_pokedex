@@ -1,0 +1,16 @@
+<h1><%= @pokemon_gen.name %> pokemons</h1>
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_infos.each do |gen| %>
+            <li class="pokemon-name">
+                <%= link_to (gen) do %>
+                    <%= image_tag "#{gen.id}.png", class: "pokemon-image", alt: "#{gen.name} image" %>
+                    <%= gen.name %>
+                <% end %>
+            </li>
+        <% end %>
+    </ol>
+    <div class="pagination">
+        <%= paginate @pokemon_infos %>
+    </div>
+</div>

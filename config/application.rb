@@ -1,4 +1,5 @@
 require_relative "boot"
+require 'will_paginate'
 
 require "rails/all"
 

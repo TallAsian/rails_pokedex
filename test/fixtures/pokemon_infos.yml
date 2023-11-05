@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  height: 1
+  weight: 1
+  pokemon_stat: one
+  pokemon_rank: one
+  pokemon_gen: one
+
+two:
+  name: MyString
+  description: MyText
+  height: 1
+  weight: 1
+  pokemon_stat: two
+  pokemon_rank: two
+  pokemon_gen: two

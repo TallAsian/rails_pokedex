@@ -1,0 +1,11 @@
+<h1>Pokemon Ranks</h1>
+
+<div>
+    <ol class="pokemon-container">
+        <% @pokemon_gen.each do |gen| %>
+            <li class="pokemon-name">
+                <%= link_to gen.name, gen %>
+            </li>
+        <% end %>
+    </ol>
+</div>
